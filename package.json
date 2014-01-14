@@ -1,0 +1,26 @@
+{
+  "name": "bespokejs.com",
+  "version": "0.0.0",
+  "description": "The Bespoke.js Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Dalgleish",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.2.0",
+    "gulp-jade": "~0.2.0",
+    "gulp-uglify": "~0.1.0",
+    "connect": "~2.12.0",
+    "chalk": "~0.4.0",
+    "connect-livereload": "~0.3.1",
+    "livereload": "~0.3.2",
+    "open": "0.0.4",
+    "gulp-autoprefixer": "0.0.2",
+    "gulp-stylus": "0.0.9",
+    "gulp-grunt": "~0.4.1",
+    "grunt": "~0.4.2",
+    "grunt-gh-pages": "~0.9.0"
+  }
+}

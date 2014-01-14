@@ -1,0 +1,18 @@
+{
+  "name": "2014.decompress.com.au",
+  "version": "0.0.0",
+  "description": "Decompress 2014 Mini Site",
+  "license": "MIT",
+  "homepage": "http://2014.decompress.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "~2.1.3"
+  }
+}
