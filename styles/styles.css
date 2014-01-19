@@ -1,0 +1,134 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  background: #f1e1e1;
+  font-family: Open Sans, Helvetica Neue;
+  font-weight: 300;
+  font-size: 62.5%;
+  color: #222;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 0 3rem;
+}
+
+h1 {
+  margin: 5rem 0 3rem;
+  text-shadow: 1px 1px 0 #222, 2px 2px 0 #222, 3px 3px 0 #222, 4px 4px 0 #222, 5px 5px 0 #222, 6px 6px 0 #222, 7px 7px 0 #222, 8px 8px 0 #222, 9px 9px 0 #222, 10px 10px 0 #222;
+  font-family: Monoton, Helvetica Neue;
+  display: block;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h1 span:nth-child(2):after,
+h1 span:nth-child(5):after {
+  content: "";
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    margin: 3rem 0 4rem;
+    font-size: 20vw;
+    text-shadow: 1px 1px 0 #222, 2px 2px 0 #222, 3px 3px 0 #222, 4px 4px 0 #222, 5px 5px 0 #222;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+header {
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin-bottom: 4rem;
+  }
+}
+
+h3 {
+  color: #777;
+}
+
+#forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
+@media screen and (max-width: 480px) {
+  #forkme {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+p {
+  font-size: 1.8em;
+  line-height: 160%;
+}
+
+a {
+  color: #ff3f3f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #df0000;
+}
+
+form {
+  margin: 7.5rem 0 20rem;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    margin: 5rem 0;
+  }
+}
+
+form input,
+form button {
+  font-weight: 200;
+  font-size: 2.4rem;
+  border: none;
+}
+
+form input {
+  padding: 3px 12px;
+  margin: 20px 6px 16px 0;
+  position: relative;
+  top: 2px;
+  width: 100%;
+  max-width: 450px;
+}
+
+form button {
+  padding: 2px 30px 5px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 1px 0 #888;
+}
