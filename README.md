@@ -1,6 +1,6 @@
-# Decompress 2014
+# decompress.io
 
-Mini site for Decompress 2014.
+Mini site for Decompress.
 
 ### Prerequisites
 
