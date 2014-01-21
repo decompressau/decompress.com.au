@@ -18,6 +18,9 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('copy', function() {
+  gulp.src('CNAME')
+    .pipe(gulp.dest('public'));
+
   gulp.src('src/img/**')
     .pipe(gulp.dest('public/img'));
 
