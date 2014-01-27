@@ -1,4 +1,4 @@
-# decompress.io
+# decompress.com.au
 
 Mini site for Decompress.
 
