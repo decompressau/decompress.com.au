@@ -1,20 +1,27 @@
 var gulp = require('gulp'),
+  watch = require('gulp-watch'),
   jade = require('gulp-jade'),
   stylus = require('gulp-stylus'),
   autoprefixer = require('gulp-autoprefixer'),
   uglify = require('gulp-uglify'),
   grunt = require('gulp-grunt'),
+  livereload = require('gulp-livereload'),
+  server = require('tiny-lr')();
   connect = require('connect'),
   http = require('http'),
-  livereload = require('livereload'),
   path = require('path'),
-  chalk = require('chalk'),
-  open = require('open');
+  open = require('open'),
+  through = require('through'),
+  dev = function (stream) {
+    return gulp.env.dev ? stream : through();
+  };
 
 gulp.task('scripts', function() {
   gulp.src('src/scripts/**/*.js')
+    .pipe(dev(watch()))
     .pipe(uglify())
-    .pipe(gulp.dest('public/scripts'));
+    .pipe(gulp.dest('public/scripts'))
+    .pipe(dev(livereload(server)));
 });
 
 gulp.task('copy', function() {
@@ -22,51 +29,41 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('public'));
 
   gulp.src('src/img/**')
-    .pipe(gulp.dest('public/img'));
+    .pipe(dev(watch()))
+    .pipe(gulp.dest('public/img'))
+    .pipe(dev(livereload(server)));
 
   gulp.src('bower_components/**')
-    .pipe(gulp.dest('public/bower_components'));
+    .pipe(dev(watch()))
+    .pipe(gulp.dest('public/bower_components'))
+    .pipe(dev(livereload(server)));
 });
 
 gulp.task('compile', function() {
   gulp.src('src/**/*.jade')
+    .pipe(dev(watch()))
     .pipe(jade())
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest('public'))
+    .pipe(dev(livereload(server)));
 
   gulp.src('src/styles/**/*.styl')
+    .pipe(dev(watch()))
     .pipe(stylus())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('public/styles'));
+    .pipe(gulp.dest('public/styles'))
+    .pipe(dev(livereload(server)));
 });
 
 gulp.task('default', function() {
   gulp.run('scripts', 'compile', 'copy');
 });
 
-gulp.task('dev', function() {
+gulp.task('serve', function() {
   gulp.run('default');
-
-  gulp.watch('src/scripts/**', function(event) {
-    gulp.run('scripts');
-  });
-
-  gulp.watch([
-    'src/img/**',
-    'bower_components/**'
-  ], function(event) {
-    gulp.run('copy');
-  });
-
-  gulp.watch([
-    'src/**/*.jade',
-    'src/styles/**/*.styl'
-  ], function(event) {
-    gulp.run('compile');
-  });
 
   // Start LiveReload server
   var LIVERELOAD_PORT = 35729;
-  livereload.createServer({ port: LIVERELOAD_PORT }).watch(path.join(__dirname, '/public'));
+  server.listen(LIVERELOAD_PORT);
 
   // Start Connect server
   var CONNECT_PORT = 8000,
@@ -74,7 +71,6 @@ gulp.task('dev', function() {
       .use(require('connect-livereload')({ port: LIVERELOAD_PORT }))
       .use(connect.static('public'));
   http.createServer(app).listen(CONNECT_PORT);
-  console.log('[' + chalk.green('connect') + '] Listening on port ' + chalk.magenta(CONNECT_PORT));
 
   // Open local server in browser
   open('http://localhost:' + CONNECT_PORT);

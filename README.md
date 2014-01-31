@@ -16,10 +16,16 @@ Build static assets to `public`:
 $ gulp
 ```
 
-Run local dev server with LiveReload:
+Run local preview server:
 
 ```bash
-$ gulp dev
+$ gulp serve
+```
+
+Run local preview server with LiveReload:
+
+```bash
+$ gulp serve --dev
 ```
 
 Deploy `public` directory to GitHub Pages:
