@@ -4,11 +4,11 @@
 }
 
 html {
-  background: #f1e1e1;
+  background: #fff;
   font-family: Open Sans, Helvetica Neue;
   font-weight: 300;
   font-size: 62.5%;
-  color: #222;
+  color: #665757;
 }
 
 @media screen and (max-width: 480px) {
@@ -24,15 +24,15 @@ html {
 }
 
 h1 {
-  margin: 5rem 0 3rem;
-  text-shadow: 1px 1px 0 #222, 2px 2px 0 #222, 3px 3px 0 #222, 4px 4px 0 #222, 5px 5px 0 #222, 6px 6px 0 #222, 7px 7px 0 #222, 8px 8px 0 #222, 9px 9px 0 #222, 10px 10px 0 #222;
+  margin: 0 0 7rem;
+  text-shadow: 1px 1px 0 #332121, 2px 2px 0 #332121, 3px 3px 0 #332121, 4px 4px 0 #332121, 5px 5px 0 #332121, 6px 6px 0 #332121, 7px 7px 0 #332121, 8px 8px 0 #332121, 9px 9px 0 #332121, 10px 10px 0 #332121, 11px 11px 0 #332121, 12px 12px 0 #332121, 13px 13px 0 #332121, 14px 14px 0 #332121, 15px 15px 0 #332121, 16px 16px 0 #332121, 17px 17px 0 #332121, 18px 18px 0 #332121, 19px 19px 0 #332121, 20px 20px 0 #332121, 21px 21px 0 #332121, 22px 22px 0 #332121, 23px 23px 0 #332121, 24px 24px 0 #332121, 25px 25px 0 #332121, 26px 26px 0 #332121, 27px 27px 0 #332121, 28px 28px 0 #332121, 29px 29px 0 #332121, 30px 30px 0 #332121, 31px 31px 0 #332121, 32px 32px 0 #332121, 33px 33px 0 #332121, 34px 34px 0 #332121, 35px 35px 0 #332121, 36px 36px 0 #332121, 37px 37px 0 #332121, 38px 38px 0 #332121, 39px 39px 0 #332121, 40px 40px 0 #332121, 41px 41px 0 #332121, 42px 42px 0 #332121, 43px 43px 0 #332121, 44px 44px 0 #332121, 45px 45px 0 #332121, 46px 46px 0 #332121, 47px 47px 0 #332121, 48px 48px 0 #332121, 49px 49px 0 #332121, 50px 50px 0 #332121;
   font-family: Monoton, Helvetica Neue;
   display: block;
   font-weight: normal;
   font-size: 150px;
   line-height: 100%;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff7f7;
 }
 
 h1 span:nth-child(2):after,
@@ -41,27 +41,39 @@ h1 span:nth-child(5):after {
   display: block;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
   h1 {
-    margin: 3rem 0 4rem;
+    margin: 4rem 0 6rem;
     font-size: 20vw;
-    text-shadow: 1px 1px 0 #222, 2px 2px 0 #222, 3px 3px 0 #222, 4px 4px 0 #222, 5px 5px 0 #222;
+    text-shadow: 1px 1px 0 #332121, 2px 2px 0 #332121, 3px 3px 0 #332121, 4px 4px 0 #332121, 5px 5px 0 #332121, 6px 6px 0 #332121, 7px 7px 0 #332121, 8px 8px 0 #332121, 9px 9px 0 #332121, 10px 10px 0 #332121, 11px 11px 0 #332121, 12px 12px 0 #332121, 13px 13px 0 #332121, 14px 14px 0 #332121, 15px 15px 0 #332121, 16px 16px 0 #332121, 17px 17px 0 #332121, 18px 18px 0 #332121, 19px 19px 0 #332121, 20px 20px 0 #332121, 21px 21px 0 #332121, 22px 22px 0 #332121, 23px 23px 0 #332121, 24px 24px 0 #332121, 25px 25px 0 #332121;
   }
 }
 
 h2 {
+  color: #332121;
   font-style: normal;
-  font-size: 3rem;
-  font-weight: 400;
-  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 header {
+  background: #ffc2c2;
+  padding: 7rem 0 4rem;
   margin-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 480px) {
   header {
+    padding: 1rem 0 1.4rem;
     margin-bottom: 4rem;
   }
 }
@@ -71,16 +83,41 @@ h3 {
 }
 
 #forkme {
+  background-color: #fff7f7;
+  overflow: hidden;
   position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
+  right: -60px;
+  top: 50px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 30;
+  border-image: initial;
+  box-shadow: 0 0 40px rgba(0,0,0,0.05);
 }
 
 @media screen and (max-width: 480px) {
   #forkme {
-    width: 120px;
-    height: 120px;
+    top: 35px;
+    right: -45px;
+  }
+}
+
+#forkme a {
+  border: none;
+  color: #665757;
+  display: block;
+  font: 14px Helvetica Neue, Helvetica, Arial;
+  font-weight: bold;
+  margin: 0.05em 0 0.075em 0;
+  padding: 0.6em 5em;
+  text-align: center;
+  text-decoration: none;
+  border-image: initial;
+}
+
+@media screen and (max-width: 480px) {
+  #forkme a {
+    font-size: 10px;
   }
 }
 
@@ -90,45 +127,63 @@ p {
 }
 
 a {
-  color: #ff3f3f;
+  color: #ff7979;
   text-decoration: none;
 }
 
 a:hover {
-  color: #df0000;
+  color: #ff0808;
 }
 
 form {
-  margin: 7.5rem 0 20rem;
+  margin: 4rem 0 20rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   form {
-    margin: 5rem 0;
+    margin: 2rem 0 8rem;
+    text-align: center;
   }
 }
 
 form input,
 form button {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 2.4rem;
   border: none;
 }
 
+@media screen and (max-width: 700px) {
+  form input,
+  form button {
+    text-align: center;
+  }
+}
+
 form input {
-  padding: 3px 12px;
+  border-bottom: 1px solid #c0c0c0;
+  padding: 5px 12px;
   margin: 20px 6px 16px 0;
-  position: relative;
-  top: 2px;
   width: 100%;
   max-width: 450px;
 }
 
-form button {
-  padding: 2px 30px 5px;
-  background: #222;
+form input::-webkit-input-placeholder {
+  color: #332121;
+}
+
+form input:focus::-webkit-input-placeholder {
   color: #fff;
-  border-radius: 6px;
+}
+
+form button {
+  padding: 4px 30px 6px;
+  background: #ff7979;
+  color: #fff;
   border: none;
-  box-shadow: 0 1px 0 #888;
+  border-radius: 4px;
+}
+
+form button:active {
+  background: #ff5353;
 }
