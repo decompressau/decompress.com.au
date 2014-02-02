@@ -28,6 +28,9 @@ gulp.task('copy', function() {
   gulp.src('CNAME')
     .pipe(gulp.dest('public'));
 
+  gulp.src('src/favicon.ico')
+    .pipe(gulp.dest('public'));
+
   gulp.src('src/img/**')
     .pipe(dev(watch()))
     .pipe(gulp.dest('public/img'))
