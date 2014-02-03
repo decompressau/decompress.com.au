@@ -15,7 +15,10 @@ html
   @media screen and (max-width: 480px)
     font-size: 50%
 
-#wrapper
+body
+  padding-bottom: 8rem
+
+.wrapper
   margin: 0 auto
   max-width: 700px
   padding: 0 3rem
@@ -44,6 +47,15 @@ h2
   margin-bottom: 4rem
   @media screen and (max-width: 480px)
     font-size: 3rem
+h3
+  color: $text
+  font-style: normal
+  font-size: 3rem
+  font-weight: 300
+  margin-bottom: 4rem
+  @media screen and (max-width: 480px)
+    font-size: 2.5rem
+    margin-bottom: 3rem
 header
   background: $background
   padding: 7rem 0 4rem
@@ -53,8 +65,6 @@ header
   @media screen and (max-width: 480px)
     padding: 1rem 0 1.4rem
     margin-bottom: 4rem
-h3
-  color: #777
 #forkme
   background-color: #FFF7F7
   overflow: hidden
@@ -82,40 +92,52 @@ h3
     @media screen and (max-width: 480px)
       font-size: 10px
 p
-  font-size: 1.8em
+  font-size: 1.8rem
   line-height: 160%
+  &:last-child
+    margin-bottom: 0
+strong
+  font-weight: normal
+  color: $shadow
+
 a
   color: $accent
   text-decoration: none
   &:hover
     color: darken($accent, 30%)
 
-form
-  margin: 4rem 0 20rem
+section
+  padding: 0 0 6rem
   @media screen and (max-width: 700px)
-    margin: 2rem 0 8rem
-    text-align: center
-  input, button
-    font-weight: 300
-    font-size: 2.4rem
-    border: none
+    padding: 0 0 5rem
+
+.form
+  margin-bottom: 2rem
+  &--signup
     @media screen and (max-width: 700px)
       text-align: center
-  input
-    border-bottom: 1px solid #c0c0c0
-    padding: 5px 12px
-    margin: 20px 6px 16px 0
-    width: 100%
-    max-width: 450px
-    &::-webkit-input-placeholder
-      color: $shadow
-    &:focus::-webkit-input-placeholder
-      color: #fff
-  button
-    padding: 4px 30px 6px
-    background: $accent
-    color: #FFF
-    border: none
-    border-radius: 4px
-    &:active
-      background: darken($accent, 10%)
+input, button, a.button
+  font-weight: 300
+  font-size: 2.4rem
+  border: none
+  @media screen and (max-width: 700px)
+    text-align: center
+input
+  border-bottom: 1px solid #c0c0c0
+  padding: 5px 12px
+  margin: 20px 6px 16px 0
+  width: 100%
+  max-width: 450px
+  &:focus::-webkit-input-placeholder
+    color: #fff
+button, a.button
+  display: inline-block
+  padding: 4px 30px 6px
+  background: $accent
+  color: #FFF
+  border: none
+  border-radius: 4px
+  &:first-child
+    margin-top: 2.5rem
+  &:active
+    background: darken($accent, 10%)
