@@ -17,7 +17,11 @@ html {
   }
 }
 
-#wrapper {
+body {
+  padding-bottom: 8rem;
+}
+
+.wrapper {
   margin: 0 auto;
   max-width: 700px;
   padding: 0 3rem;
@@ -63,6 +67,21 @@ h2 {
   }
 }
 
+h3 {
+  color: #665757;
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
 header {
   background: #ffc2c2;
   padding: 7rem 0 4rem;
@@ -76,10 +95,6 @@ header {
     padding: 1rem 0 1.4rem;
     margin-bottom: 4rem;
   }
-}
-
-h3 {
-  color: #777;
 }
 
 #forkme {
@@ -122,8 +137,17 @@ h3 {
 }
 
 p {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   line-height: 160%;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: normal;
+  color: #332121;
 }
 
 a {
@@ -135,32 +159,43 @@ a:hover {
   color: #ff0808;
 }
 
-form {
-  margin: 4rem 0 20rem;
+section {
+  padding: 0 0 6rem;
 }
 
 @media screen and (max-width: 700px) {
-  form {
-    margin: 2rem 0 8rem;
+  section {
+    padding: 0 0 5rem;
+  }
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .form--signup {
     text-align: center;
   }
 }
 
-form input,
-form button {
+input,
+button,
+a.button {
   font-weight: 300;
   font-size: 2.4rem;
   border: none;
 }
 
 @media screen and (max-width: 700px) {
-  form input,
-  form button {
+  input,
+  button,
+  a.button {
     text-align: center;
   }
 }
 
-form input {
+input {
   border-bottom: 1px solid #c0c0c0;
   padding: 5px 12px;
   margin: 20px 6px 16px 0;
@@ -168,15 +203,13 @@ form input {
   max-width: 450px;
 }
 
-form input::-webkit-input-placeholder {
-  color: #332121;
-}
-
-form input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder {
   color: #fff;
 }
 
-form button {
+button,
+a.button {
+  display: inline-block;
   padding: 4px 30px 6px;
   background: #ff7979;
   color: #fff;
@@ -184,6 +217,12 @@ form button {
   border-radius: 4px;
 }
 
-form button:active {
+button:first-child,
+a.button:first-child {
+  margin-top: 2.5rem;
+}
+
+button:active,
+a.button:active {
   background: #ff5353;
 }
