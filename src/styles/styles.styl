@@ -15,13 +15,13 @@ html
   @media screen and (max-width: 480px)
     font-size: 50%
 
-body
-  padding-bottom: 8rem
+body > :last-child
+  padding-bottom: 14rem
 
 .wrapper
   margin: 0 auto
   max-width: 700px
-  padding: 0 3rem
+  padding: 0.1rem 3rem
 h1
   margin: 0 0 7rem
   text-shadow: 1px 1px 0 $shadow, 2px 2px 0 $shadow, 3px 3px 0 $shadow, 4px 4px 0 $shadow, 5px 5px 0 $shadow, 6px 6px 0 $shadow, 7px 7px 0 $shadow, 8px 8px 0 $shadow, 9px 9px 0 $shadow, 10px 10px 0 $shadow, 11px 11px 0 $shadow, 12px 12px 0 $shadow, 13px 13px 0 $shadow, 14px 14px 0 $shadow, 15px 15px 0 $shadow, 16px 16px 0 $shadow, 17px 17px 0 $shadow, 18px 18px 0 $shadow, 19px 19px 0 $shadow, 20px 20px 0 $shadow, 21px 21px 0 $shadow, 22px 22px 0 $shadow, 23px 23px 0 $shadow, 24px 24px 0 $shadow, 25px 25px 0 $shadow, 26px 26px 0 $shadow, 27px 27px 0 $shadow, 28px 28px 0 $shadow, 29px 29px 0 $shadow, 30px 30px 0 $shadow, 31px 31px 0 $shadow, 32px 32px 0 $shadow, 33px 33px 0 $shadow, 34px 34px 0 $shadow, 35px 35px 0 $shadow, 36px 36px 0 $shadow, 37px 37px 0 $shadow, 38px 38px 0 $shadow, 39px 39px 0 $shadow, 40px 40px 0 $shadow, 41px 41px 0 $shadow, 42px 42px 0 $shadow, 43px 43px 0 $shadow, 44px 44px 0 $shadow, 45px 45px 0 $shadow, 46px 46px 0 $shadow, 47px 47px 0 $shadow, 48px 48px 0 $shadow, 49px 49px 0 $shadow, 50px 50px 0 $shadow
@@ -53,9 +53,21 @@ h3
   font-size: 3rem
   font-weight: 300
   margin-bottom: 4rem
+  .sponsors &
+    margin-bottom: 0
   @media screen and (max-width: 480px)
     font-size: 2.5rem
     margin-bottom: 3rem
+h4
+  color: $text
+  font-style: normal
+  font-size: 2rem
+  font-weight: 300
+  margin-bottom: 0rem
+  @media screen and (max-width: 480px)
+    font-size: 1.5rem
+    margin-bottom: .5rem
+
 header
   background: $background
   padding: 7rem 0 4rem
@@ -106,9 +118,14 @@ a
     color: darken($accent, 30%)
 
 section
-  padding: 0 0 6rem
+  padding: 0 0 4rem
+  &.dark
+    background: $shadow
+    padding-top: 2rem
+  &.sponsors
+    padding-bottom: 10rem
   @media screen and (max-width: 700px)
-    padding: 0 0 5rem
+    padding-bottom: 3rem
 
 .form
   margin-bottom: 2rem

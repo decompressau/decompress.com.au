@@ -31,9 +31,9 @@ gulp.task('copy', function() {
   gulp.src('src/favicon.ico')
     .pipe(gulp.dest('public'));
 
-  gulp.src('src/img/**')
+  gulp.src('src/images/**')
     .pipe(dev(watch()))
-    .pipe(gulp.dest('public/img'))
+    .pipe(gulp.dest('public/images'))
     .pipe(dev(livereload(server)));
 
   gulp.src('bower_components/**')
