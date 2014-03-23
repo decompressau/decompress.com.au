@@ -17,14 +17,14 @@ html {
   }
 }
 
-body {
-  padding-bottom: 8rem;
+body > :last-child {
+  padding-bottom: 14rem;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 700px;
-  padding: 0 3rem;
+  padding: 0.1rem 3rem;
 }
 
 h1 {
@@ -75,10 +75,29 @@ h3 {
   margin-bottom: 4rem;
 }
 
+.sponsors h3 {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 480px) {
   h3 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
+  }
+}
+
+h4 {
+  color: #665757;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0rem;
+}
+
+@media screen and (max-width: 480px) {
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -159,12 +178,21 @@ a:hover {
 }
 
 section {
-  padding: 0 0 6rem;
+  padding: 0 0 4rem;
+}
+
+section.dark {
+  background: #332121;
+  padding-top: 2rem;
+}
+
+section.sponsors {
+  padding-bottom: 10rem;
 }
 
 @media screen and (max-width: 700px) {
   section {
-    padding: 0 0 5rem;
+    padding-bottom: 3rem;
   }
 }
 
