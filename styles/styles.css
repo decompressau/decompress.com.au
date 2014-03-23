@@ -253,3 +253,7 @@ button:active,
 a.button:active {
   background: #ff5353;
 }
+
+img {
+  max-width: 100%;
+}
