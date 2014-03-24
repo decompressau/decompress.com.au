@@ -58,7 +58,7 @@ h2 {
   font-style: normal;
   font-size: 4rem;
   font-weight: 300;
-  margin-bottom: 4rem;
+  margin: 0 0 4rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -197,7 +197,7 @@ section.sponsors {
 }
 
 .form {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -224,7 +224,7 @@ a.button {
 
 input {
   border-bottom: 1px solid #c0c0c0;
-  padding: 5px 12px;
+  padding: 5px 0;
   margin: 20px 6px 16px 0;
   width: 100%;
   max-width: 450px;
