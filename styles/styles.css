@@ -187,7 +187,7 @@ section.dark {
 }
 
 section.grey {
-  background: #fafafa;
+  background: #f0f0f0;
   padding: 2rem 0 5rem;
 }
 
@@ -270,7 +270,7 @@ img {
 
 .speakers__speaker {
   background: #e5e5e5;
-  box-shadow: 0 3px 0 #a0a0a0;
+  box-shadow: 0 2px 0 #909090;
   display: inline-block;
   width: 90px;
   height: 90px;
@@ -283,7 +283,7 @@ img {
 
 @media screen and (max-width: 700px) {
   .speakers__speaker {
-    box-shadow: 0 1px 0 #a0a0a0;
+    box-shadow: 0 1px 0 #909090;
     width: 60px;
     height: 60px;
     margin: 0 8px 8px 0;
