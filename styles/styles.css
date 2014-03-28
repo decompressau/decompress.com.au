@@ -186,6 +186,11 @@ section.dark {
   padding-top: 2rem;
 }
 
+section.grey {
+  background: #fafafa;
+  padding: 2rem 0 5rem;
+}
+
 section.sponsors {
   padding-bottom: 10rem;
 }
@@ -256,4 +261,31 @@ a.button:active {
 
 img {
   max-width: 100%;
+}
+
+.speakers {
+  list-style: none;
+  padding: 0;
+}
+
+.speakers__speaker {
+  background: #e5e5e5;
+  box-shadow: 0 3px 0 #a0a0a0;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  text-indent: -200%;
+  background-size: cover;
+  margin: 0 16px 16px 0;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 700px) {
+  .speakers__speaker {
+    box-shadow: 0 1px 0 #a0a0a0;
+    width: 60px;
+    height: 60px;
+    margin: 0 8px 8px 0;
+  }
 }
