@@ -12,6 +12,10 @@ var gulp = require('gulp'),
   path = require('path'),
   open = require('open'),
   through = require('through'),
+  Twitter = require('ntwitter'),
+  _ = require('lodash'),
+  fs = require('fs'),
+  path = require('path'),
   dev = function (stream) {
     return gulp.env.dev ? stream : through();
   };
@@ -45,7 +49,12 @@ gulp.task('copy', function() {
 gulp.task('compile', function() {
   gulp.src('src/**/*.jade')
     .pipe(dev(watch()))
-    .pipe(jade())
+    .pipe(jade({
+        data: {
+          speakers: require('./data/speakers.json'),
+          avatars: require('./data/avatars.json')
+        }
+      }))
     .pipe(gulp.dest('public'))
     .pipe(dev(livereload(server)));
 
@@ -77,6 +86,21 @@ gulp.task('serve', function() {
 
   // Open local server in browser
   open('http://localhost:' + CONNECT_PORT);
+});
+
+gulp.task('avatars', function(done) {
+  var handles = _.pluck(require('./data/speakers.json'), 'twitter'),
+    twitter = new Twitter(require('./data/twitter.json'));
+
+  twitter.showUser(handles, function(err, users) {
+    var data = {};
+
+    users.forEach(function(user) {
+      data[user.screen_name] = user.profile_image_url.replace('_normal.', '_reasonably_small.');
+    });
+
+    fs.writeFile(path.join(__dirname, 'data/avatars.json'), JSON.stringify(data, null, 2), done);
+  });
 });
 
 gulp.task('deploy', function() {

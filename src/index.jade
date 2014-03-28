@@ -50,6 +50,19 @@ html(lang='en')
           input(name='cm-obhjr-obhjr', type='email', placeholder='Enter email address...', required)
           button(type='submit') Join the list
 
+    section.grey
+
+      .wrapper
+
+        h3 Speakers and Workshoppers
+
+        ul.speakers
+          each speaker in speakers
+            a(href='https://twitter.com/' + speaker.twitter, target='_blank', title=speaker.name)
+              li.speakers__speaker(style='background-image:url(' + avatars[speaker.twitter] + ')')= speaker.name
+
+        p More will be announced soon. Want to join the lineup? <a href="https://twitter.com/decompressau">Let us know!</a>
+
     section.dark.sponsors
 
       .wrapper
