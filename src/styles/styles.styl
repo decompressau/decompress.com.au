@@ -61,7 +61,7 @@ h3
 h4
   color: lighten($text, 20%)
   font-style: normal
-  font-size: 2rem
+  font-size: 1.8rem
   font-weight: 300
   margin-bottom: 0rem
 
@@ -106,11 +106,10 @@ header
 
   &__column
     width: 50%
-    padding-right: 50px
     float: left
     @media screen and (max-width: 480px)
       float: none
-      width: 70%
+      width: 75%
       padding-right: 0
 
 p
@@ -141,8 +140,14 @@ section
     padding-bottom: 3rem
 
 .logo
+  transform-origin: 0 0
+  max-width: 80%
+  @media screen and (max-width: 480px)
+    max-width: 100%
   &--buildbox
-    max-height: 8.4rem
+    transform: scale(0.93) translateY(0.5%)
+  &--thoughtworks
+    transform: translateX(-2.5%)
 
 .form
   margin-bottom: 1rem
