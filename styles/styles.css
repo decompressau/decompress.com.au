@@ -89,7 +89,7 @@ h3 {
 h4 {
   color: #897575;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   margin-bottom: 0rem;
 }
@@ -154,14 +154,13 @@ header {
 
 .columns__column {
   width: 50%;
-  padding-right: 50px;
   float: left;
 }
 
 @media screen and (max-width: 480px) {
   .columns__column {
     float: none;
-    width: 70%;
+    width: 75%;
     padding-right: 0;
   }
 }
@@ -212,8 +211,26 @@ section.sponsors {
   }
 }
 
+.logo {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  max-width: 80%;
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    max-width: 100%;
+  }
+}
+
 .logo--buildbox {
-  max-height: 8.4rem;
+  -webkit-transform: scale(0.93) translateY(0.5%);
+  transform: scale(0.93) translateY(0.5%);
+}
+
+.logo--thoughtworks {
+  -webkit-transform: translateX(-2.5%);
+  transform: translateX(-2.5%);
 }
 
 .form {
