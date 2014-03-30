@@ -67,9 +67,17 @@ html(lang='en')
 
       .wrapper
 
-        h3 Coffee sponsor
-        a(href='https://buildbox.io', target='_blank')
-          img(src='images/buildbox-logo-300x100.png', title='Buildbox')
+        .columns
+
+          .columns__column
+            h4 Coffee Sponsor
+            a(href='https://buildbox.io', target='_blank')
+              img.logo.logo--buildbox(src='images/buildbox-logo.png', title='Buildbox')
+
+          .columns__column
+            h4 Food &amp; Drink Sponsor
+            a(href='http://thoughtworks.com', target='_blank')
+              img.logo.logo--thoughtworks(src='images/thoughtworks-logo.png', title='Thoughtworks')
 
 
     script.
