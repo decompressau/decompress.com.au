@@ -34,6 +34,12 @@ Deploy `public` directory to GitHub Pages:
 $ gulp deploy
 ```
 
+Download speaker avatars, assuming `data/twitter.json` contains your API access tokens:
+
+```bash
+$ gulp avatars
+```
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
