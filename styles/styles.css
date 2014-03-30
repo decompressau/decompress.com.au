@@ -87,18 +87,11 @@ h3 {
 }
 
 h4 {
-  color: #665757;
+  color: #897575;
   font-style: normal;
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 0rem;
-}
-
-@media screen and (max-width: 480px) {
-  h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
 }
 
 header {
@@ -155,6 +148,24 @@ header {
   }
 }
 
+.columns {
+  overflow: hidden;
+}
+
+.columns__column {
+  width: 50%;
+  padding-right: 50px;
+  float: left;
+}
+
+@media screen and (max-width: 480px) {
+  .columns__column {
+    float: none;
+    width: 70%;
+    padding-right: 0;
+  }
+}
+
 p {
   font-size: 1.8rem;
   line-height: 160%;
@@ -199,6 +210,10 @@ section.sponsors {
   section {
     padding-bottom: 3rem;
   }
+}
+
+.logo--buildbox {
+  max-height: 8.4rem;
 }
 
 .form {
