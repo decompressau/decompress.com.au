@@ -313,7 +313,7 @@ img {
   border-radius: 100px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 480px) {
   .speakers__speaker {
     box-shadow: 0 1px 0 #909090;
     width: 60px;
