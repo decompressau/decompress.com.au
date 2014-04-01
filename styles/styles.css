@@ -153,8 +153,13 @@ header {
 }
 
 .columns__column {
+  margin: 0 auto;
   width: 50%;
   float: left;
+}
+
+.columns__column--1of1 {
+  float: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -202,6 +207,7 @@ section.grey {
 }
 
 section.sponsors {
+  text-align: center;
   padding-bottom: 10rem;
 }
 
@@ -229,8 +235,13 @@ section.sponsors {
 }
 
 .logo--thoughtworks {
-  -webkit-transform: translateX(-2.5%);
-  transform: translateX(-2.5%);
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.logo--melbourne-uni {
+  margin-top: 1.5rem;
+  max-width: 60%;
 }
 
 .form {
