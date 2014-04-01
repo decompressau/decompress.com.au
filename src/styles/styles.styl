@@ -105,8 +105,11 @@ header
   overflow: hidden
 
   &__column
+    margin: 0 auto
     width: 50%
     float: left
+    &--1of1
+      float: none
     @media screen and (max-width: 480px)
       float: none
       width: 75%
@@ -135,6 +138,7 @@ section
     background: #f0f0f0
     padding: 2rem 0 5rem
   &.sponsors
+    text-align: center
     padding-bottom: 10rem
   @media screen and (max-width: 700px)
     padding-bottom: 3rem
@@ -147,7 +151,10 @@ section
   &--buildbox
     transform: scale(0.93) translateY(0.5%)
   &--thoughtworks
-    transform: translateX(-2.5%)
+    transform: translateX(0%)
+  &--melbourne-uni
+    margin-top: 1.5rem
+    max-width: 60%
 
 .form
   margin-bottom: 1rem
