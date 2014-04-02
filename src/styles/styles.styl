@@ -103,6 +103,8 @@ header
 
 .columns
   overflow: hidden
+  &--topics
+    padding: 1rem 0 2rem
 
   &__column
     margin: 0 auto
@@ -112,10 +114,11 @@ header
       float: none
     @media screen and (max-width: 480px)
       float: none
-      width: 75%
+      width: auto
       padding-right: 0
 
-p
+p,
+ul
   font-size: 1.8rem
   line-height: 160%
   &:last-child
@@ -147,7 +150,7 @@ section
   transform-origin: 0 0
   max-width: 80%
   @media screen and (max-width: 480px)
-    max-width: 100%
+    max-width: 75%
   &--buildbox
     transform: scale(0.93) translateY(0.5%)
   &--thoughtworks
@@ -189,6 +192,12 @@ button, a.button
 
 img
   max-width: 100%
+
+.topics
+  margin-top: 0
+  margin-bottom: 0
+  padding-top: 0
+  padding-bottom: 0
 
 .speakers
   list-style: none
