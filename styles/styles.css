@@ -315,8 +315,8 @@ img {
   background: #e5e5e5;
   box-shadow: 0 2px 0 #909090;
   display: inline-block;
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
   overflow: hidden;
   text-indent: -200%;
   background-size: cover;
@@ -326,9 +326,8 @@ img {
 
 @media screen and (max-width: 480px) {
   .speakers__speaker {
-    box-shadow: 0 1px 0 #909090;
-    width: 60px;
-    height: 60px;
-    margin: 0 8px 8px 0;
+    width: 55px;
+    height: 55px;
+    margin: 0 12px 12px 0;
   }
 }
