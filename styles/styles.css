@@ -152,6 +152,10 @@ header {
   overflow: hidden;
 }
 
+.columns--topics {
+  padding: 1rem 0 2rem;
+}
+
 .columns__column {
   margin: 0 auto;
   width: 50%;
@@ -165,17 +169,19 @@ header {
 @media screen and (max-width: 480px) {
   .columns__column {
     float: none;
-    width: 75%;
+    width: auto;
     padding-right: 0;
   }
 }
 
-p {
+p,
+ul {
   font-size: 1.8rem;
   line-height: 160%;
 }
 
-p:last-child {
+p:last-child,
+ul:last-child {
   margin-bottom: 0;
 }
 
@@ -225,7 +231,7 @@ section.sponsors {
 
 @media screen and (max-width: 480px) {
   .logo {
-    max-width: 100%;
+    max-width: 75%;
   }
 }
 
@@ -304,6 +310,13 @@ a.button:active {
 
 img {
   max-width: 100%;
+}
+
+.topics {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .speakers {
