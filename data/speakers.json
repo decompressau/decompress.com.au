@@ -1,9 +1,5 @@
 [
   {
-    "name": "Mark Dalgleish",
-    "twitter": "markdalgleish"
-  },
-  {
     "name": "Ryan Seddon",
     "twitter": "ryanseddon"
   }, {
@@ -22,17 +18,17 @@
     "name": "Basarat Ali",
     "twitter": "basarat"
   }, {
-    "name": "Michael Taranto",
-    "twitter": "michaeltaranto"
-  }, {
     "name": "Andrey Sidorov",
     "twitter": "sidorares"
   }, {
-    "name": "Keith Pitt",
-    "twitter": "keithpitt"
+    "name": "Michael Taranto",
+    "twitter": "michaeltaranto"
   }, {
     "name": "Ben Teese",
     "twitter": "benteese"
+  }, {
+    "name": "Keith Pitt",
+    "twitter": "keithpitt"
   }, {
     "name": "Ben Smithett",
     "twitter": "bensmithett"
@@ -51,14 +47,13 @@
   }, {
     "name": "Isaac Johnston",
     "twitter": "superstructor"
-  },
-  {
+  }, {
     "name": "Hadi Michael",
     "twitter": "hadi_michael"
   }, {
     "name": "Zach Goldstein",
     "twitter": "whatthezach"
-  },{
+  }, {
     "name": "David Bankier",
     "twitter": "davidbankier"
   }, {
@@ -67,5 +62,8 @@
   }, {
     "name": "John Bristowe",
     "twitter": "JohnBristowe"
+  }, {
+    "name": "Mark Dalgleish",
+    "twitter": "markdalgleish"
   }
 ]
