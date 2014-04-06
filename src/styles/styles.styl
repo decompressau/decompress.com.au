@@ -50,12 +50,14 @@ h2
 h3
   color: $text
   font-style: normal
-  font-size: 3rem
+  font-size: 4rem
   font-weight: 300
-  margin-bottom: 4rem
+  margin: 3rem 0
   .sponsors &
     margin-bottom: 0
-  @media screen and (max-width: 480px)
+  @media screen and (max-width: 640px)
+    font-size: 3.5rem
+  @media screen and (max-width: 520px)
     font-size: 2.5rem
     margin-bottom: 3rem
 h4
@@ -112,19 +114,51 @@ header
     float: left
     &--1of1
       float: none
-    @media screen and (max-width: 480px)
+    @media screen and (max-width: 600px)
       float: none
       width: auto
       padding-right: 0
 
-p,
-ul
+p
   font-size: 1.8rem
   line-height: 160%
   &:last-child
     margin-bottom: 0
 strong
   font-weight: 600
+
+
+ul,
+dl
+  list-style: none
+  font-size: 1.8rem
+  line-height: 160%
+  margin-top: 0
+  margin-bottom: 0rem
+  padding: 0
+  overflow: hidden
+ul
+  @media screen and (max-width: 480px)
+    list-style: disc
+    padding-left: 2rem
+dt
+  clear: left
+  float: left
+  font-weight: bold
+  width: 8rem
+  margin-right: 2rem
+  padding-bottom: 2rem
+  @media screen and (max-width: 600px)
+    width: 8rem
+    margin-right: 3rem
+li,
+dt
+  padding-bottom: 1.5rem
+  @media screen and (max-width: 480px)
+    padding-bottom: 1rem
+dd
+  float: left
+  margin-left: 0
 
 a
   color: $accent
@@ -134,17 +168,21 @@ a
 
 section
   padding: 0 0 4rem
+  @media screen and (max-width: 700px)
+    padding-bottom: 3rem
   &.dark
     background: $shadow
     padding-top: 2rem
   &.grey
     background: #f0f0f0
-    padding: 2rem 0 5rem
+    padding: 3rem 0 7rem
+    margin: 3rem 0
+    @media screen and (max-width: 700px)
+      padding: 2rem 0 5rem
+      margin: 2rem 0
   &.sponsors
     text-align: center
     padding-bottom: 10rem
-  @media screen and (max-width: 700px)
-    padding-bottom: 3rem
 
 .logo
   transform-origin: 0 0
@@ -201,7 +239,7 @@ img
 
 .speakers
   list-style: none
-  padding: 0
+  padding: 1rem 0
 
   &__speaker
     background: #e5e5e5
