@@ -172,7 +172,7 @@ header {
   float: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 630px) {
   .columns__column {
     float: none;
     width: auto;
