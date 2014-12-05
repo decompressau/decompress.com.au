@@ -25,94 +25,14 @@ html(lang='en')
 
         h2 Community day for designers and developers.
 
-        p Join <a href="http://cssconf.com.au">CSSConf</a> &amp; <a href="http://au.jsconf.com">JSConf</a> presenters and attendees on <strong>Friday April 11<sup>th</sup></strong>, in <strong>Melbourne University's</strong> heritage listed <a href="https://www.google.com.au/maps/place/1888+Bldg+Swanston+St/@-37.7997364,144.9632332,17z" target="_blank"><strong>1888 Building (view map)</strong></a> for the community-driven conclusion to an epic week of web events.
+        p Join <a href="http://cssconf.com.au">CSSConf</a> presenters and attendees on <strong>Saturday March 28<sup>th</sup></strong>, in the stunning <strong>Arts House Meat Market</strong> for the community-driven conclusion to an epic week of web events.
 
-        p Bring your friends, partners and coworkers. See or give a lightning talk, register as a mentor, share what you've learned, hack on a project, or just enjoy a cool drink and chat at the outdoor bar.
+        p Bring your friends, partners and coworkers. See or give a lightning talk, register as a mentor, share what you've learned, hack on a project, or just enjoy a cool drink and chat at the bar.
 
-        p Proudly brought to you by <a href="http://twitter.com/markdalgleish">@markdalgleish</a> and the CSSConf and JSConf crew.
+        p Proudly brought to you by <a href="http://twitter.com/markdalgleish">@markdalgleish</a> and the CSSConf team.
 
-        .buttons
-
-          a.button(href='http://lanyrd.com/2014/decompressau', target='_blank') View Schedule
-
-          a.button(href='https://www.google.com.au/maps/place/1888+Bldg+Swanston+St/@-37.7997364,144.9632332,17z', target='_blank') View Map
-
-    section.grey
-
-      .wrapper
-
-        h3 Speakers and Mentors
-
-        ul.speakers
-          each speaker in speakers
-            a(href='https://twitter.com/' + speaker.twitter, target='_blank', title=speaker.name)
-              li.speakers__speaker(style='background-image:url(' + avatars[speaker.twitter] + ')')= speaker.name
-
-        p Our generous community members will be covering a wide range of UI design and development related topics, including:
-
-        .columns.columns--topics
-
-          .columns__column
-            ul.topics
-              li CSS architecture
-              li AngularJS
-              li Hardware accelerated CSS
-              li PhoneGap &amp; Titanium
-              li Testing and debugging
-
-          .columns__column
-            ul.topics
-              li Backbone and React
-              li Leap Motion
-              li JavaScript macros
-              li Google Glass
-              li UI toolkits
-
-        h3 Event Schedule
-
-        .columns.columns--topics
-
-          .columns__column
-
-            dl.schedule
-
-              dt 8:30 AM
-              dd Registration, coffee
-
-              dt 9:00 AM
-              dd Hacking begins
-
-              dt 9:40 AM
-              dd Lightning talks begin
-
-              dt 12:00 PM
-              dd Lunch break
-
-          .columns__column
-
-            dl.schedule
-
-              dt 1:00 PM
-              dd Lightning talks resume
-
-              dt 5:10 PM
-              dd Lightning talks finish
-
-              dt 5:30 PM
-              dd Hacking finishes
-
-              dt 5:31 PM
-              dd After-party begins
-
-        p For a more detailed schedule, check out our <a href="http://lanyrd.com/2014/decompressau" target="_blank">Lanyrd event page</a>.
 
     .wrapper
-
-      section
-
-        h3 Tickets
-
-        p Due to overwhelming demand, Decompress tickets are now sold out. However, <strong>entry is free for CSSConfAU and JSConfAU 2014 ticket holders.</strong>
 
       section
 
@@ -123,30 +43,6 @@ html(lang='en')
         form.form.form--signup(action='http://jsconfau.createsend.com/t/j/s/obhjr/', method='post')
           input(name='cm-obhjr-obhjr', type='email', placeholder='Enter email address...', required)
           button(type='submit') Join the list
-
-    section.dark.sponsors
-
-      .wrapper
-
-        .columns
-
-          .columns__column
-            h4 Coffee Sponsor
-            a(href='https://buildbox.io', target='_blank')
-              img.logo.logo--buildbox(src='images/buildbox-logo.png', title='Buildbox')
-
-          .columns__column
-            h4 Food &amp; Drink Sponsor
-            a(href='http://thoughtworks.com', target='_blank')
-              img.logo.logo--thoughtworks(src='images/thoughtworks-logo.png', title='Thoughtworks')
-
-        .columns
-
-          .columns__column.columns__column--1of1
-            h4 Supported By
-            a(href='http://www.unimelb.edu.au/', target='_blank')
-              img.logo.logo--melbourne-uni(src='images/melbourne-uni-logo.png', title='Melbourne University')
-
 
     script.
       var _gauges = _gauges || [];
