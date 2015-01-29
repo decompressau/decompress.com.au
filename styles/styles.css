@@ -418,3 +418,12 @@ img {
     margin: 0 12px 12px 0;
   }
 }
+
+.tickets {
+  margin: 9rem 0;
+  text-align: center;
+}
+
+.tickets p {
+  font-size: 2.5rem;
+}
