@@ -25,7 +25,7 @@ $ gulp serve
 Run local preview server with LiveReload:
 
 ```bash
-$ gulp serve --dev
+$ gulp dev
 ```
 
 Deploy `public` directory to GitHub Pages:

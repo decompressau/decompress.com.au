@@ -9,22 +9,22 @@
   "author": "Mark Dalgleish",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "~3.2.0",
-    "gulp-jade": "~0.2.0",
-    "gulp-uglify": "~0.1.0",
     "connect": "~2.12.0",
     "connect-livereload": "~0.3.1",
-    "open": "0.0.4",
-    "gulp-autoprefixer": "0.0.2",
-    "gulp-stylus": "0.0.9",
-    "gulp-grunt": "~0.4.1",
     "grunt": "~0.4.2",
     "grunt-gh-pages": "~0.9.0",
-    "gulp-watch": "~0.5.0",
-    "through": "~2.3.4",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "0.0.2",
+    "gulp-grunt": "~0.4.1",
+    "gulp-jade": "~0.2.0",
     "gulp-livereload": "~0.2.0",
-    "tiny-lr": "0.0.5",
+    "gulp-stylus": "0.0.9",
+    "gulp-uglify": "~0.1.0",
+    "gulp-watch": "^4.1.0",
+    "lodash": "~2.4.1",
     "ntwitter": "~0.5.0",
-    "lodash": "~2.4.1"
+    "open": "0.0.4",
+    "through": "~2.3.4",
+    "tiny-lr": "0.0.5"
   }
 }

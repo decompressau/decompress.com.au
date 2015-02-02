@@ -16,16 +16,19 @@ var gulp = require('gulp'),
   _ = require('lodash'),
   fs = require('fs'),
   path = require('path'),
-  dev = function (stream) {
-    return gulp.env.dev ? stream : through();
+  isDev = process.argv.indexOf('dev') >= 0,
+  livereloadIfDevMode = function (stream) {
+    return isDev ? livereload(server) : through();
+  },
+  watchableSrc = function(glob) {
+    return isDev ? watch(glob) : gulp.src(glob);
   };
 
 gulp.task('scripts', function() {
-  gulp.src('src/scripts/**/*.js')
-    .pipe(dev(watch()))
+  watchableSrc('src/scripts/**/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('public/scripts'))
-    .pipe(dev(livereload(server)));
+    .pipe(livereloadIfDevMode());
 });
 
 gulp.task('copy', function() {
@@ -35,20 +38,17 @@ gulp.task('copy', function() {
   gulp.src('src/favicon.ico')
     .pipe(gulp.dest('public'));
 
-  gulp.src('src/images/**')
-    .pipe(dev(watch()))
+  watchableSrc('src/images/**')
     .pipe(gulp.dest('public/images'))
-    .pipe(dev(livereload(server)));
+    .pipe(livereloadIfDevMode());
 
-  gulp.src('bower_components/**')
-    .pipe(dev(watch()))
+  watchableSrc('bower_components/**')
     .pipe(gulp.dest('public/bower_components'))
-    .pipe(dev(livereload(server)));
+    .pipe(livereloadIfDevMode());
 });
 
 gulp.task('compile', function() {
-  gulp.src('src/**/*.jade')
-    .pipe(dev(watch()))
+  watchableSrc('src/**/*.jade')
     .pipe(jade({
         data: {
           speakers: require('./data/speakers.json'),
@@ -56,23 +56,18 @@ gulp.task('compile', function() {
         }
       }))
     .pipe(gulp.dest('public'))
-    .pipe(dev(livereload(server)));
+    .pipe(livereloadIfDevMode());
 
-  gulp.src('src/styles/**/*.styl')
-    .pipe(dev(watch()))
+  watchableSrc('src/styles/**/*.styl')
     .pipe(stylus())
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('public/styles'))
-    .pipe(dev(livereload(server)));
+    .pipe(livereloadIfDevMode());
 });
 
-gulp.task('default', function() {
-  gulp.run('scripts', 'compile', 'copy');
-});
+gulp.task('default', ['scripts', 'compile', 'copy']);
 
-gulp.task('serve', function() {
-  gulp.run('default');
-
+gulp.task('serve', ['default'], function() {
   // Start LiveReload server
   var LIVERELOAD_PORT = 35729;
   server.listen(LIVERELOAD_PORT);
@@ -87,6 +82,8 @@ gulp.task('serve', function() {
   // Open local server in browser
   open('http://localhost:' + CONNECT_PORT);
 });
+
+gulp.task('dev', ['serve']);
 
 gulp.task('avatars', function(done) {
   var handles = _.pluck(require('./data/speakers.json'), 'twitter'),
@@ -103,9 +100,7 @@ gulp.task('avatars', function(done) {
   });
 });
 
-gulp.task('deploy', function() {
-  gulp.run('grunt-gh-pages');
-});
+gulp.task('deploy', ['grunt-gh-pages']);
 
 // Add all Grunt tasks to Gulp
 grunt(gulp);
