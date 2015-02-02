@@ -1,3 +1,5 @@
+[ ![Codeship Status for decompressau/decompress.com.au](https://www.codeship.io/projects/a19e8d30-8c03-0132-3135-328ae7f2fceb/status)](https://www.codeship.io/projects/60398)
+
 # decompress.com.au
 
 Mini site for Decompress.
