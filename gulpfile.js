@@ -1,10 +1,10 @@
 var gulp = require('gulp'),
+  gutil = require('gulp-util'),
   watch = require('gulp-watch'),
   jade = require('gulp-jade'),
   stylus = require('gulp-stylus'),
   autoprefixer = require('gulp-autoprefixer'),
   uglify = require('gulp-uglify'),
-  grunt = require('gulp-grunt'),
   livereload = require('gulp-livereload'),
   server = require('tiny-lr')();
   connect = require('connect'),
@@ -13,6 +13,7 @@ var gulp = require('gulp'),
   open = require('open'),
   through = require('through'),
   Twitter = require('ntwitter'),
+  ghpages = require('gh-pages'),
   _ = require('lodash'),
   fs = require('fs'),
   path = require('path'),
@@ -100,7 +101,6 @@ gulp.task('avatars', function(done) {
   });
 });
 
-gulp.task('deploy', ['grunt-gh-pages']);
-
-// Add all Grunt tasks to Gulp
-grunt(gulp);
+gulp.task('deploy', ['default'], function(done) {
+  ghpages.publish(path.join(__dirname, 'public'), { logger: gutil.log, message: 'Updates --skip-ci' }, done);
+});
