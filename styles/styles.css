@@ -339,15 +339,17 @@ a.button {
   }
 }
 
+.buttons {
+  text-align: center;
+}
+
 .buttons .button {
   margin-right: 2rem;
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 700px) {
-  .buttons {
-    text-align: center;
-  }
+.twitter-tweet {
+  width: 99% !important;
 }
 
 input {
