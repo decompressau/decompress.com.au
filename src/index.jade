@@ -35,10 +35,72 @@ html(lang='en')
 
         .buttons
 
-          a.button(href='http://lanyrd.com/2015/decompressau', target='_blank') View Schedule
+          a.button(href='http://lanyrd.com/2015/decompressau', target='_blank') View Event Schedule
 
           a.button(href='https://www.google.com.au/maps/place/Arts+House+Meat+Market/@-37.801651,144.954389,15z/data=!4m2!3m1!1s0x0:0x8b61205468637770', target='_blank') View Map
 
+    section.grey
+
+      .wrapper
+
+        h3 Speakers and Mentors
+
+        ul.speakers
+          each speaker in speakers
+            a(href='https://twitter.com/' + speaker.twitter, target='_blank', title=speaker.name)
+              li.speakers__speaker(style='background-image:url(' + avatars[speaker.twitter] + ')')= speaker.name
+
+        p Our generous community members will be covering a wide range of UI design and development related topics, including:
+
+        .columns.columns--topics
+
+          .columns__column
+            ul.topics
+              li React
+              li Flux
+              li Webpack
+              li Front-end architecture
+              li Functional programming
+
+          .columns__column
+            ul.topics
+              li Nodebots
+              li Creative coding and design
+              li Performance
+              li Accessibility
+              li Internet of Things
+
+        h3 Event Schedule
+
+        .columns.columns--topics
+
+          .columns__column
+
+            dl.schedule
+
+              dt 8:30 AM
+              dd Registration, coffee
+
+              dt 9:30 AM
+              dd Lightning talks begin
+
+              dt 12:20 PM
+              dd Lunch break
+
+          .columns__column
+
+            dl.schedule
+
+              dt 2:00 PM
+              dd Lightning talks resume
+
+              dt 5:20 PM
+              dd Lightning talks finish
+
+              dt 5:30 PM
+              dd Decompress wraps up
+
+        p For a full schedule of lightning talks, check out our <a href="http://lanyrd.com/2015/decompressau" target="_blank">Lanyrd event page</a>.
 
     .wrapper
 

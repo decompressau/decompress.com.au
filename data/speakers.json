@@ -1,69 +1,74 @@
 [
   {
-    "name": "Pete Hunt",
-    "twitter": "floydophone"
-  }, {
-    "name": "Ana Tudor",
-    "twitter": "thebabydino"
-  }, {
-    "name": "Alex Feyerke",
-    "twitter": "espylaub"
-  }, {
-    "name": "Ryan Seddon",
-    "twitter": "ryanseddon"
-  }, {
-    "name": "Basarat Ali",
-    "twitter": "basarat"
-  }, {
-    "name": "Jed Watson",
-    "twitter": "JedWatson"
-  }, {
-    "name": "Andrey Sidorov",
-    "twitter": "sidorares"
-  }, {
-    "name": "Michael Taranto",
-    "twitter": "michaeltaranto"
-  }, {
-    "name": "Ben Teese",
-    "twitter": "benteese"
-  }, {
-    "name": "Keith Pitt",
-    "twitter": "keithpitt"
-  }, {
+    "name": "Andrew Fisher",
+    "twitter": "ajfisher"
+  },
+  {
     "name": "Ben Smithett",
     "twitter": "bensmithett"
-  }, {
-    "name": "Michael Mifsud",
-    "twitter": "xzyfer"
-  }, {
-    "name": "Sebastian Porto",
-    "twitter": "sebasporto"
-  }, {
-    "name": "Casey Leask",
-    "twitter": "CaseyLeask"
-  }, {
-    "name": "Tommy Williams",
-    "twitter": "theRealDevgeeks"
-  }, {
-    "name": "Isaac Johnston",
-    "twitter": "superstructor"
-  }, {
-    "name": "Hadi Michael",
-    "twitter": "hadi_michael"
-  }, {
-    "name": "Zach Goldstein",
-    "twitter": "whatthezach"
-  }, {
-    "name": "David Bankier",
-    "twitter": "davidbankier"
-  }, {
+  },
+  {
+    "name": "Rhiana Heath",
+    "twitter": "RhianaHeath"
+  },
+  {
+    "name": "Justin Morris",
+    "twitter": "plasticine"
+  },
+  {
+    "name": "Tan Le",
+    "twitter": "tancnle"
+  },
+  {
+    "name": "Adem Cifcioglu",
+    "twitter": "ademcifci"
+  },
+  {
+    "name": "Kelle Connolly",
+    "twitter": "kelle_c"
+  },
+  {
     "name": "Alistair Roche",
     "twitter": "atroche"
-  }, {
-    "name": "John Bristowe",
-    "twitter": "JohnBristowe"
-  }, {
-    "name": "Mark Dalgleish",
-    "twitter": "markdalgleish"
+  },
+  {
+    "name": "Laura Summers",
+    "twitter": "summerscope"
+  },
+  {
+    "name": "James Hunter",
+    "twitter": "cccc00"
+  },
+  {
+    "name": "Sebastian Porto",
+    "twitter": "sebasporto"
+  },
+  {
+    "name": "Luchia Bloomfield",
+    "twitter": "luchiamae"
+  },
+  {
+    "name": "Jonathon Bellew",
+    "twitter": "jonathonbellew"
+  },
+  {
+    "name": "Rob Kerr",
+    "twitter": "robrkerr"
+  },
+  {
+    "name": "Basarat Ali Syed",
+    "twitter": "basarat"
+  },
+  {
+    "name": "Hadi Michael",
+    "twitter": "hadi_michael"
+  },
+  {
+    "name": "Davide L Rizzo",
+    "twitter": "davidelrizzo"
+  },
+  {
+    "name": "Karolina Szczur",
+    "twitter": "fox"
   }
 ]
